@@ -1,58 +1,179 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hồ Sơ Cá Nhân - [Tên Của Bạn]</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Tính năng bổ sung 1: Dark Mode Toggle -->
-    <button id="theme-toggle">🌙 Dark Mode</button>
+/* --- CSS Variables cho Light/Dark Mode --- */
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --primary-color: #00f2fe;
+    --secondary-color: #4facfe;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
 
-    <header>
-        <nav>
-            <div class="logo">[Tên Của Bạn]</div>
-            <ul>
-                <li><a href="#about">Về tôi</a></li>
-                <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </header>
+body.light-mode {
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --primary-color: #007bff;
+    --secondary-color: #6610f2;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+}
 
-    <section class="hero fade-in">
-        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện của tôi">
-        <h1>Xin chào, tôi là <span class="highlight">[Tên Của Bạn]</span></h1>
-        <p>Sinh viên ngành [Ngành Học] | Đam mê Lập trình Web</p>
-    </section>
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
 
-    <section id="about" class="fade-in">
-        <h2>Về Tôi</h2>
-        <p>Tôi là một người yêu thích công nghệ và luôn tò mò về cách các trang web hoạt động. Hiện tại, tôi đang tập trung học HTML, CSS và JavaScript để có thể tự xây dựng những sản phẩm cho riêng mình.</p>
-    </section>
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    /* Hiệu ứng nền gradient mờ ảo */
+    background-image: radial-gradient(circle at 15% 50%, rgba(79, 172, 254, 0.08), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.08), transparent 25%);
+}
 
-    <section id="skills" class="fade-in">
-        <h2>Kỹ Năng</h2>
-        <div class="skill-container">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Responsive Design</div>
-        </div>
-    </section>
+/* --- Nút Theme Toggle --- */
+.theme-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.theme-btn:hover { transform: scale(1.1); }
 
-    <section id="contact" class="fade-in">
-        <h2>Liên Hệ</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
+/* --- Header & Nav --- */
+header {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
 
-    <footer>
-        <p>&copy; <span id="year"></span> [Tên Của Bạn]. All rights reserved.</p>
-    </footer>
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    padding: 15px 30px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    backdrop-filter: blur(15px);
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--text-color); text-decoration: none; }
+.logo span { color: var(--primary-color); }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: var(--primary-color); }
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 50px;
+}
+
+.hero-content { flex: 1; }
+.greeting { color: var(--primary-color); font-weight: 500; letter-spacing: 2px; margin-bottom: 10px; }
+
+.glow-text {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.typing-container { font-size: 2rem; color: var(--text-color); margin-bottom: 20px; height: 40px;}
+.cursor { color: var(--primary-color); animation: blink 1s infinite; }
+
+.bio { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin-bottom: 40px; line-height: 1.6; }
+
+/* Buttons */
+.hero-btns { display: flex; gap: 20px; }
+.btn { padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+.primary-btn { background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); color: #fff; box-shadow: 0 0 15px rgba(0, 242, 254, 0.4); }
+.primary-btn:hover { box-shadow: 0 0 25px rgba(0, 242, 254, 0.8); transform: translateY(-3px); }
+.secondary-btn { border: 2px solid var(--primary-color); color: var(--text-color); }
+.secondary-btn:hover { background: var(--primary-color); color: #000; }
+
+/* Avatar với hiệu ứng viền phát sáng */
+.hero-avatar { position: relative; }
+.hero-avatar img {
+    width: 350px; height: 350px; object-fit: cover; border-radius: 50%; position: relative; z-index: 2;
+}
+.avatar-ring {
+    position: absolute; top: -15px; left: -15px; right: -15px; bottom: -15px;
+    border-radius: 50%; background: linear-gradient(45deg, var(--primary-color), transparent, var(--secondary-color));
+    z-index: 1; animation: spin 5s linear infinite; filter: blur(10px);
+}
+
+/* --- Skills Section --- */
+.skills-section { padding: 100px 10%; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+.section-title span { color: var(--primary-color); }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 40px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+.skill-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.skill-card p { color: var(--text-muted); }
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer { text-align: center; padding: 40px; border-top: 1px solid var(--glass-border); color: var(--text-muted); }
+
+/* --- Animations --- */
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Hiệu ứng cuộn (Tính năng bổ sung 2) */
+.fade-in { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-in.appear { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 968px) {
+    .hero { flex-direction: column-reverse; text-align: center; justify-content: center; padding-top: 150px; gap: 30px;}
+    .hero-content { display: flex; flex-direction: column; align-items: center; }
+    .glow-text { font-size: 3rem; }
+    .hero-avatar img { width: 250px; height: 250px; }
+    .nav-links { display: none; } /* Ẩn menu trên mobile để đơn giản hóa */
+}
