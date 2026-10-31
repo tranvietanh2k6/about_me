@@ -1,12 +1,12 @@
-# 🌟 Alex Vance - Visionary Developer & UI/UX Designer
+# 🌟 Tr Viet Anh - Visionary Developer & UI/UX Designer
 
-Chào mừng bạn đến với repository của **Alex Vance** - một trang web cá nhân (Personal Portfolio) được thiết kế với phong cách hiện đại, tinh tế và đậm chất công nghệ. Dự án này không chỉ là một bài tập lập trình web mà còn là tuyên ngôn nghệ thuật của một lập trình viên hoàn hảo.
+Chào mừng bạn đến với repository của **Tr_Viet_Anh** - một trang web cá nhân (Personal Portfolio) được thiết kế với phong cách hiện đại, tinh tế và đậm chất công nghệ. Dự án này không chỉ là một bài tập lập trình web mà còn là tuyên ngôn nghệ thuật của một lập trình viên hoàn hảo.
 
 ## 🌐 Live Demo
 Trải nghiệm giao diện tuyệt đẹp này ngay tại đây:
-👉 **[https://alexvance.dev](https://alexvance.dev)** *(Link minh họa)*
+👉 **[https://tranvietanh2k6.github.io/about_me/](https://tranvietanh2k6.github.io/about_me/)** *(Link minh họa)*
 
-## 👤 Về Nhân Vật (Alex Vance)
+## 👤 Về Nhân Vật (Tr Viet Anh)
 - **Vai trò:** Senior Full-Stack Developer & Lead UI/UX Designer.
 - **Kinh nghiệm:** 8+ năm kiến tạo các sản phẩm số đạt giải thưởng quốc tế.
 - **Triết lý:** "Code không chỉ để chạy, mà còn phải là một trải nghiệm thị giác hoàn mỹ."
