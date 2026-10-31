@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Cá Nhân - [Tên Của Bạn]</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tính năng bổ sung 1: Dark Mode Toggle -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
+    <header>
+        <nav>
+            <div class="logo">[Tên Của Bạn]</div>
+            <ul>
+                <li><a href="#about">Về tôi</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện của tôi">
+        <h1>Xin chào, tôi là <span class="highlight">[Tên Của Bạn]</span></h1>
+        <p>Sinh viên ngành [Ngành Học] | Đam mê Lập trình Web</p>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>Về Tôi</h2>
+        <p>Tôi là một người yêu thích công nghệ và luôn tò mò về cách các trang web hoạt động. Hiện tại, tôi đang tập trung học HTML, CSS và JavaScript để có thể tự xây dựng những sản phẩm cho riêng mình.</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Kỹ Năng</h2>
+        <div class="skill-container">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Responsive Design</div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Liên Hệ</h2>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> [Tên Của Bạn]. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
