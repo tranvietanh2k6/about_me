@@ -3,54 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hồ Sơ Cá Nhân - [Tên Của Bạn]</title>
+    <title>Alex Vance | Visionary Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Boxicons cho icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Tính năng bổ sung 1: Dark Mode Toggle -->
-    <button id="theme-toggle">🌙 Dark Mode</button>
+    <!-- Nút chuyển đổi Theme (Tính năng bổ sung 4) -->
+    <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
 
     <header>
-        <nav>
-            <div class="logo">[Tên Của Bạn]</div>
-            <ul>
+        <nav class="glass-nav">
+            <a href="#" class="logo">AV<span>.</span></a>
+            <ul class="nav-links">
                 <li><a href="#about">Về tôi</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#projects">Dự án</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero fade-in">
-        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện của tôi">
-        <h1>Xin chào, tôi là <span class="highlight">[Tên Của Bạn]</span></h1>
-        <p>Sinh viên ngành [Ngành Học] | Đam mê Lập trình Web</p>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <p class="greeting">Xin chào, tôi là</p>
+                <h1 class="glow-text">Alex Vance</h1>
+                <!-- Tính năng bổ sung 1: Typing Effect -->
+                <h2 class="typing-container">Tôi là <span id="typing-text"></span><span class="cursor">|</span></h2>
+                <p class="bio">Kiến tạo những trải nghiệm số hoàn mỹ thông qua sự giao thoa giữa mã nguồn tối ưu và thiết kế đỉnh cao.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn primary-btn">Xem Dự Án</a>
+                    <a href="#contact" class="btn secondary-btn">Liên Hệ</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <div class="avatar-ring"></div>
+                <!-- Ảnh placeholder cho người hoàn hảo -->
+                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=600&auto=format&fit=crop" alt="Alex Vance">
+            </div>
+        </section>
 
-    <section id="about" class="fade-in">
-        <h2>Về Tôi</h2>
-        <p>Tôi là một người yêu thích công nghệ và luôn tò mò về cách các trang web hoạt động. Hiện tại, tôi đang tập trung học HTML, CSS và JavaScript để có thể tự xây dựng những sản phẩm cho riêng mình.</p>
-    </section>
-
-    <section id="skills" class="fade-in">
-        <h2>Kỹ Năng</h2>
-        <div class="skill-container">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Responsive Design</div>
-        </div>
-    </section>
-
-    <section id="contact" class="fade-in">
-        <h2>Liên Hệ</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section fade-in">
+            <h2 class="section-title">Kỹ Năng <span>Vượt Trội</span></h2>
+            <div class="skills-grid">
+                <!-- Tính năng bổ sung 3: Interactive Glow Cards -->
+                <div class="skill-card glass-card">
+                    <i class='bx bxl-react'></i>
+                    <h3>Front-end</h3>
+                    <p>React, Next.js, Vue.js, TailwindCSS</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class='bx bxl-nodejs'></i>
+                    <h3>Back-end</h3>
+                    <p>Node.js, Python, Go, PostgreSQL</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class='bx bxl-figma'></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Prototyping, Design Systems</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> [Tên Của Bạn]. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Alex Vance. Crafted with <i class='bx bxs-heart' style="color: #ff4757;"></i> and Code.</p>
     </footer>
 
     <script src="script.js"></script>
