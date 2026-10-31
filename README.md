@@ -35,4 +35,4 @@ Trang web được thiết kế lại hoàn toàn từ đầu (Tùy chọn 1) v�
 - **Responsive 100%:** Giao diện được tối ưu hóa hoàn hảo, hiển thị mượt mà từ màn hình 4K cho đến các thiết bị di động nhỏ nhất (iPhone SE).
 
 ---
-*Thiết kế và phát triển bởi Alex Vance. © 2024*
+*Thiết kế và phát triển bởi Tr VietAnh. © 2024*
