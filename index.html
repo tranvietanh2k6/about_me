@@ -3,77 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Vance | Visionary Developer</title>
+    <title>Trần Việt Anh | Sinh viên Kỹ thuật phần mềm</title>
+    <meta name="description" content="Trang cá nhân của Trần Việt Anh, sinh viên Kỹ thuật phần mềm tại FPT University: chứng chỉ, kỹ năng và dự án sắp tới.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Boxicons cho icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Nút chuyển đổi Theme (Tính năng bổ sung 4) -->
-    <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
-
     <header>
-        <nav class="glass-nav">
-            <a href="#" class="logo">AV<span>.</span></a>
+        <nav class="wrap" aria-label="Điều hướng chính">
+            <a href="#top" class="logo">VA</a>
             <ul class="nav-links">
-                <li><a href="#about">Về tôi</a></li>
+                <li><a href="#about">Về mình</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
                 <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Đổi giao diện sáng/tối">☀</button></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero fade-in">
-            <div class="hero-content">
-                <p class="greeting">Xin chào, tôi là</p>
-                <h1 class="glow-text">Alex Vance</h1>
-                <!-- Tính năng bổ sung 1: Typing Effect -->
-                <h2 class="typing-container">Tôi là <span id="typing-text"></span><span class="cursor">|</span></h2>
-                <p class="bio">Kiến tạo những trải nghiệm số hoàn mỹ thông qua sự giao thoa giữa mã nguồn tối ưu và thiết kế đỉnh cao.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn primary-btn">Xem Dự Án</a>
-                    <a href="#contact" class="btn secondary-btn">Liên Hệ</a>
+ 
+    <main id="top">
+        <section class="hero">
+            <div class="wrap">
+                <div>
+                    <p class="greeting">Xin chào, mình là</p>
+                    <h1>Trần Việt Anh</h1>
+                    <p class="role"><span id="typing-text">Sinh viên Kỹ thuật phần mềm</span><span class="cursor" aria-hidden="true">|</span></p>
+                    <p class="bio">Mình đang học lập trình web tại FPT University. Mình muốn làm những trang web đơn giản, dễ dùng, giúp ích cho người dùng thật.</p>
+                    <div class="btns">
+                        <a href="#skills" class="btn primary">Xem chứng chỉ</a>
+                        <a href="#contact" class="btn ghost">Nhắn cho mình</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-avatar">
-                <div class="avatar-ring"></div>
-                <!-- Ảnh placeholder cho người hoàn hảo -->
-                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=600&auto=format&fit=crop" alt="Alex Vance">
+                <div class="portrait">
+                    <div class="initials" aria-hidden="true">VA</div>
+                    <!-- SỬA: bỏ ảnh thật của bạn vào images/avatar.jpg. Chưa có ảnh thì trang tự hiện chữ VA. -->
+                    <img src="images/avatar.jpg" alt="Ảnh chân dung của Trần Việt Anh" onerror="this.remove()">
+                    <span class="sticker a">Sinh viên FPT</span>
+                    <span class="sticker b">Đang học web</span>
+                </div>
             </div>
         </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section fade-in">
-            <h2 class="section-title">Kỹ Năng <span>Vượt Trội</span></h2>
-            <div class="skills-grid">
-                <!-- Tính năng bổ sung 3: Interactive Glow Cards -->
-                <div class="skill-card glass-card">
-                    <i class='bx bxl-react'></i>
-                    <h3>Front-end</h3>
-                    <p>React, Next.js, Vue.js, TailwindCSS</p>
+ 
+        <section id="about">
+            <div class="wrap">
+                <h2>Về mình</h2>
+                <div class="about-grid">
+                    <div>
+                        <!-- SỬA: thêm 1–2 câu thật của bạn: vì sao chọn ngành này, bạn thích gì ở lập trình. -->
+                        <p>Mình là Trần Việt Anh, sinh viên ngành Kỹ thuật phần mềm tại trường FPT. Mình đang xây nền tảng về HTML, CSS và JavaScript, và đã hoàn thành các khóa học bên dưới.</p>
+                        <p>Mình chưa có dự án hoàn chỉnh nào, và mình muốn bắt đầu bằng một dự án có ích cho mẹ và bé (xem phần Dự án).</p>
+                    </div>
+                    <ul class="facts">
+                        <li><span>Trường</span><strong>FPT University</strong></li>
+                        <li><span>Ngành</span><strong>Kỹ thuật phần mềm</strong></li>
+                        <li><span>Chứng chỉ</span><strong>5 khóa học</strong></li>
+                        <li><span>Dự án tới</span><strong>Web đồ ăn cho bé</strong></li>
+                    </ul>
                 </div>
-                <div class="skill-card glass-card">
-                    <i class='bx bxl-nodejs'></i>
-                    <h3>Back-end</h3>
-                    <p>Node.js, Python, Go, PostgreSQL</p>
+            </div>
+        </section>
+ 
+        <section id="skills">
+            <div class="wrap">
+                <h2>Kỹ năng và chứng chỉ</h2>
+                <div class="skill-groups">
+                    <div style="--c: var(--leaf)">
+                        <h3>Nền tảng web</h3>
+                        <p>Những gì mình đã học và thực hành qua các khóa.</p>
+                        <ul class="chips"><li>HTML5</li><li>CSS3</li><li>Responsive design</li><li>JavaScript</li></ul>
+                    </div>
+                    <div style="--c: var(--sky)">
+                        <h3>Hiểu về AI</h3>
+                        <p>Nắm khái niệm cơ bản để dùng AI đúng chỗ.</p>
+                        <ul class="chips"><li>AI cơ bản</li></ul>
+                    </div>
                 </div>
-                <div class="skill-card glass-card">
-                    <i class='bx bxl-figma'></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Prototyping, Design Systems</p>
+ 
+                <h3 class="cert-title">Chứng chỉ đã hoàn thành</h3>
+                <ul class="certs">
+                    <li><span class="tick" aria-hidden="true">✓</span><div><strong>Introduction to HTML5</strong><span>University of Michigan</span></div></li>
+                    <li><span class="tick" aria-hidden="true">✓</span><div><strong>Introduction to CSS3</strong><span>University of Michigan</span></div></li>
+                    <li><span class="tick" aria-hidden="true">✓</span><div><strong>Interactivity with JavaScript</strong><span>University of Michigan</span></div></li>
+                    <li><span class="tick" aria-hidden="true">✓</span><div><strong>Advanced Styling with Responsive Design</strong><span>University of Michigan</span></div></li>
+                    <li><span class="tick" aria-hidden="true">✓</span><div><strong>AI For Everyone</strong><span>DeepLearning.AI</span></div></li>
+                </ul>
+                <!-- SỬA: có link xem chứng chỉ thì gắn vào, ví dụ <a href="...">Xem chứng chỉ</a> trong từng mục -->
+            </div>
+        </section>
+ 
+        <section id="projects">
+            <div class="wrap">
+                <h2>Dự án</h2>
+                <div class="project">
+                    <h3>Web đồ ăn cho trẻ nhỏ</h3><span class="year">Đang lên ý tưởng</span>
+                    <p>Một trang web giúp mẹ chọn và đặt đồ ăn cho bé thật tiện, ví dụ cháo dinh dưỡng. Mục tiêu là mẹ đỡ mất thời gian, bé có bữa ăn phù hợp.</p>
+                    <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+                </div>
+                <p class="note">Khi dự án có bản chạy thử, mình sẽ thêm link vào đây.</p>
+            </div>
+        </section>
+ 
+        <section id="contact" class="contact">
+            <div class="wrap">
+                <h2>Có ý tưởng? Nói chuyện nhé.</h2>
+                <p>Bạn muốn góp ý, hợp tác hoặc chỉ hỏi thăm, cứ gửi email cho mình.</p>
+                <div class="btns">
+                    <a class="btn primary" href="mailto:tranvietanh2k6@gmail.com">Gửi email</a>
+                    <button class="btn ghost" id="copy-email" data-email="tranvietanh2k6@gmail.com">Sao chép email</button>
                 </div>
             </div>
         </section>
     </main>
-
+ 
     <footer>
-        <p>&copy; <span id="year"></span> Alex Vance. Crafted with <i class='bx bxs-heart' style="color: #ff4757;"></i> and Code.</p>
+        <p>&copy; <span id="year"></span> Trần Việt Anh. Tự tay viết bằng HTML, CSS và JavaScript.</p>
     </footer>
-
+ 
     <script src="script.js"></script>
 </body>
 </html>
+ 
